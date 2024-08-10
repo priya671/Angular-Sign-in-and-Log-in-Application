@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/Login Form</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row w-85">
+            
+            <!-- Left Section -->
+            <div class="col-md-5 left-section">
+                <div class="row">
+                    <div class="text-center">
+                        <img src="assets/logo.png" alt="Logo" class="logo" style="float: left;">
+                    </div>
+                    <img src="assets/illustration.png" alt="Illustration" class="illustration">
+                </div>
+                
+            </div>
+            <!-- Right Section -->
+            <div class="col-md-7 right-section">
+                <div class="row text-center">
+                    <div class="text-center">
+                    <img src="assets/correct.png" alt="Logo" class="img-fluid" style="width: 350px; height: 350px;">
+                    </div>
+                    
+
+                    <div *ngIf="source === 'login'; else fromSignup">
+                        <h2>Logging you in...</h2>
+                        <span style="color: #737e8a;">Kindly wait as we are curating the data accordingly.</span>
+                    </div>
+
+                    <ng-template #fromSignup>
+                        <h2>Welcome to Solvei8!</h2>
+                        <span style="color: #737e8a;">Redirecting you to the Login screen. This might take a few seconds...</span>
+                      </ng-template>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

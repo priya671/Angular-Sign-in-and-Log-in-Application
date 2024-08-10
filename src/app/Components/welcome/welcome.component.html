@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/Login Form</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row w-85">
+            
+            <!-- Left Section -->
+            <div class="col-md-5 left-section">
+                <div class="row">
+                    <div class="text-center">
+                        <img src="assets/logo.png" alt="Logo" class="logo" style="float: left;">
+                    </div>
+                    <img src="assets/illustration.png" alt="Illustration" class="illustration">
+                </div>
+                
+            </div>
+            <!-- Right Section -->
+            <div class="col-md-7 right-section">
+                <h2 class="text-justify mb-4"><b>Welcome</b></h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Enter Email ID</label>
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" placeholder="Enter full name">
+                    </div>
+                    <p class="text-center">(OR)</p>
+                    <div class="form-group">
+                        <label for="phone">Enter Mobile No.</label>
+                        <input type="text" class="form-control" id="phone" [(ngModel)]="phonenumber"
+                        name="phonenumber" placeholder="91+">
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="checkUser()">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

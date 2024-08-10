@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/Login Form</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row w-85">
+
+        <!-- Left Section -->
+        <div class="col-md-5 left-section">
+            <div class="row">
+                <div class="text-center">
+                    <img src="assets/logo.png" alt="Logo" class="logo" style="float: left;">
+                </div>
+                <img src="assets/illustration.png" alt="Illustration" class="illustration">
+            </div>
+
+        </div>
+        <!-- Right Section -->
+        <div class="col-md-7 right-section">
+            <h2 class="text-justify mb-4"><b>Create Account</b></h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Enter Email ID</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email"
+                    disabled>
+                </div>
+                <div class="form-group">
+                    <label for="email">Enter Full name</label>
+                    <input type="email" class="form-control" id="name" name="name" [(ngModel)]="name"
+                    placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <input type="text" class="form-control" id="password" [(ngModel)]="password" name="password"
+                        placeholder="Password">
+                </div>
+                <!-- <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+                    {{ errorMessage }}
+                  </div> -->
+                <button type="submit" class="btn btn-primary" (click)="signup()">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
